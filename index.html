@@ -39,8 +39,7 @@
     }
     .item{
       display:flex;
-      align-items:center;
-      justify-content:space-between;
+      flex-direction: column;
       padding:15px 0;
       border-bottom:1px solid #2c2c2c;
       transition: 0.3s;
@@ -69,10 +68,46 @@
       font-size:18px;
       color:#cccccc;
       white-space:nowrap;
+      margin-top: 10px;
     }
     .left{
       display:flex;
       align-items:center;
+      margin-bottom: 10px;
+    }
+    .sauces {
+      font-size: 14px;
+      color: #bbbbbb;
+      list-style-type: square;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+    .sauces li {
+      margin-bottom: 4px;
+    }
+    .contacts {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #2c2c2c;
+    }
+    .social-button {
+      display: inline-block;
+      margin: 15px auto;
+      padding: 10px 20px;
+      background-color: #833ab4;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .social-button:hover {
+      background-color: #6a2d8d;
+    }
+    @media (max-width: 600px) {
+      .sauces {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -83,6 +118,7 @@
       <h1>Меню</h1>
     </div>
 
+    <!-- Элементы меню -->
     <div class="item">
       <div class="left">
         <img src="nagets.jpg" alt="Нагетсы">
@@ -138,14 +174,15 @@
       </div>
       <div class="price">140грн</div>
     </div>
-<div class="item">
+
+    <!-- Соусы -->
+    <div class="item">
       <div class="left">
-        <img src="sous.jpg" alt="СОУСИ">
+        <img src="sous.jpg" alt="Соуси">
         <div class="name">Соус</div>
       </div>
       <div class="price">15грн</div>
-    </div>
-<ul class="sauces">
+      <ul class="sauces">
         <li>Кисло-солодкий</li>
         <li>Барбекю</li>
         <li>Карі</li>
@@ -155,18 +192,22 @@
         <li>Тартар</li>
         <li>Кетчуп</li>
         <li>Часниковий</li>
-      
+        <li>Соус с хреном</li>
       </ul>
-<div class="contacts">
+    </div>
+
+    <!-- Контакты -->
+    <div class="contacts">
       <p>📍 Адрес: вулиця Амосова, 18, Софіївська Борщагівка, Київська область, 08138</p>
       <p>📞 Телефон: -----</p>
       <p>🕒 Працюємо: з 11:00–23:00</p>
       <a href="https://www.instagram.com/one_pinta/" 
-       target="_blank" 
-       rel="noopener" 
-       class="social-button">
-      📷 Instagram
-    </a></div>
+         target="_blank" 
+         rel="noopener" 
+         class="social-button">
+        📷 Instagram
+      </a>
+    </div>
   </div>
 </body>
 </html>
